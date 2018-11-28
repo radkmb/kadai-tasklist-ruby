@@ -9,6 +9,9 @@
     </div>
   <% end %>
   
+  <%= f.label :status, 'ステータス' %>
+  <%= f.select :status, [["ToDo", "ToDo"],  ["Doing", "Doing"], ["Done", "Done"] ], :prompt => "選択してください" %>
+  <br>
   <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
   
