@@ -5,7 +5,6 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>id</th>
         <th>ステータス</th>
         <th>タスク</th>
       </tr>
@@ -13,7 +12,6 @@
     <tbody>
       <% @tasks.each do |task| %>
         <tr>
-          <td><%= link_to task.id, task %></td>
           <td><%= task.status %></td>
           <td><%= task.content %></td>
         </tr>
@@ -29,8 +27,8 @@
 <% else %>
 <div class="center jumbotron">
     <div class="text-center">
-      <h1>Welcome to the Microposts</h1>
-      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+      <h1>Welcome to the Tasklist!</h1>
+      <%= link_to '新規登録', signup_path, class: 'btn btn-lg btn-primary' %>
     </div>
   </div>
 <% end %>
